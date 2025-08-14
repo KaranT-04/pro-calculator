@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculator</title>
+        <link rel="stylesheet" href="./bootstrap.min.css">
+    </head>
+<body>
+   <style>
+      body {
+            background-image: url(./cal.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background: rgb(38, 36, 36);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+        }
+        .calc-input {
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            border-color: black;
+        }
+        .btn {
+            font-size: 18px;
+            padding: 15px;
+        }
+   </style>
+    <div class="calculator">
+       <input type="text" id="input" class="form-control mb-3 calc-input"></input>
+         <div class="row g-2">
+          <div class="col-3"><button class="btn btn-danger text-white w-100" id="AC" >AC</button></div>
+          <div class="col-3"><button class="btn btn-warning text-white w-100" id="del" >del</button></div>
+          <div class="col-3"><button class="btn btn-primary text-white w-100" id="a%" value="%">%</button></div>
+          <div class="col-3"><button class="btn btn-primary text-white w-100" id="a/" value="/">/</button></div>
+          <div class="col-3"><button class="btn btn-light  w-100" id="a1" value="1">1</button></div>
+          <div class="col-3"><button class="btn btn-light  w-100" id="a2" value="2">2</button></div>
+          <div class="col-3"><button class="btn btn-light  w-100" id="a3" value="3">3</button></div>
+          <div class="col-3"><button class="btn btn-primary text-white w-100" id="a+" value="+">+</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a4" value="4">4</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a5" value="5">5</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a6" value="6">6</button></div>
+          <div class="col-3"><button class="btn btn-primary text-white w-100" id="a-" value="-">-</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a7" value="7">7</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a8" value="8">8</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a9" value="9">9</button></div>
+          <div class="col-3"><button class="btn btn-primary text-white w-100" id="a*" value="*">x</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a." value=".">.</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" id="a0" value="0">0</button></div>
+          <div class="col-6"><button class="btn btn-success text-white w-100" id="a=" value="=">=</button></div>  
+        </div>
+    </div>
+    <script> 
+       var input=document.getElementById("input")
+        var a1=document.getElementById("a1")
+        var a2=document.getElementById("a2")
+        var a3=document.getElementById("a3")
+        var a4=document.getElementById("a4")
+        var a5=document.getElementById("a5")
+        var a6=document.getElementById("a6")
+        var a7=document.getElementById("a7")
+        var a8=document.getElementById("a8")
+        var a9=document.getElementById("a9")
+        var a0=document.getElementById("a0")
+        var add=document.getElementById("a+")
+        var sub=document.getElementById("a-")
+        var mul=document.getElementById("a*")
+        var div=document.getElementById("a/")
+        var mod=document.getElementById("a%")
+        var dot=document.getElementById("a.")
+        var sum=document.getElementById("a=")
+        var del=document.getElementById("del")
+        var
+
+AC=document.getElementById("AC")
+    
+    
+         a1.addEventListener("click",()=>{
+            input.value+=a1.value
+            })
+         a2.addEventListener("click",()=>{
+            input.value+=a2.value
+            })
+         a3.addEventListener("click",()=>{
+            input.value+=a3.value
+            })
+         a4.addEventListener("click",()=>{
+            input.value+=a4.value
+            })
+         a5.addEventListener("click",()=>{
+            input.value+=a5.value
+            })
+         a6.addEventListener("click",()=>{
+            input.value+=a6.value
+            })
+         a7.addEventListener("click",()=>{
+            input.value+=a7.value
+            })
+         a8.addEventListener("click",()=>{
+            input.value+=a8.value
+            })
+         a9.addEventListener("click",()=>{
+            input.value+=a9.value
+            })
+         a0.addEventListener("click",()=>{
+            input.value+=a0.value
+            })
+         add.addEventListener("click",()=>{
+            input.value+=add.value
+            })
+         sub.addEventListener("click",()=>{
+            input.value+=sub.value
+            })
+         mul.addEventListener("click",()=>{
+            input.value+=mul.value
+            })
+         div.addEventListener("click",()=>{
+            input.value+=div.value
+            })
+         mod.addEventListener("click",()=>{
+            input.value+=mod.value
+            })
+         dot.addEventListener("click",()=>{
+            input.value+=dot.value
+            })
+        
+         sum.addEventListener("click",()=>{
+            input.value=eval(input.value)
+            })
+        
+         del.addEventListener("click",()=>{
+            input.value=input.value.slice(0,-1)
+            })
+            
+         AC.addEventListener("click",()=>{
+            input.value=" "
+            })
+      </script>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
